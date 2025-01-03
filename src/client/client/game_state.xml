@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><GameState><Player>O</Player><GameType>AI vs Man</GameType><Board><Row><Cell>O</Cell><Cell>O</Cell><Cell>X</Cell></Row><Row><Cell>_</Cell><Cell>X</Cell><Cell>_</Cell></Row><Row><Cell>X</Cell><Cell>_</Cell><Cell>_</Cell></Row></Board><Status>Win X</Status></GameState>

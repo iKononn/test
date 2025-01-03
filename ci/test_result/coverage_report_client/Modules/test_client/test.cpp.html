@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8"/>
+	    <title>test.cpp</title>
+	    <link href="../../third-party/google-code-prettify/prettify-CppCoverage.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="../../third-party/google-code-prettify/prettify.js"></script>
+	</head>
+    <body onload="prettyPrint()">
+        <h4></h4>
+        <pre class="prettyprint lang-cpp linenums">
+#include "pch.h"
+#include &lt;gtest/gtest.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;string&gt;
+#include &lt;filesystem&gt;
+#include "GameLogic.h"
+
+class SerialPort {
+public:
+<span style = "background-color:#dfd">    virtual ~SerialPort() = default;</span>
+<span style = "background-color:#fdd">    virtual HANDLE openSerialPort(const wstring&amp; portName, DWORD baudRate) {
+        return INVALID_HANDLE_VALUE;
+    }</span>
+
+<span style = "background-color:#fdd">    virtual void sendMessage(HANDLE hSerial, const string&amp; message) {
+        SetLastError(ERROR_IO_DEVICE);
+    }</span>
+
+<span style = "background-color:#fdd">    virtual string readMessage(HANDLE hSerial) {
+        return "Hello, World!";
+    }</span>
+};
+
+class MockSerialPort : public SerialPort {
+public:
+<span style = "background-color:#dfd">    HANDLE openSerialPort(const wstring&amp; portName, DWORD baudRate) override {
+        if (portName == L"COM1") {
+            return INVALID_HANDLE_VALUE;</span>
+        }
+<span style = "background-color:#fdd">        return (HANDLE)1;</span>
+<span style = "background-color:#dfd">    }
+    void sendMessage(HANDLE hSerial, const string&amp; message) override {
+        SetLastError(ERROR_IO_DEVICE);
+    }</span>
+
+<span style = "background-color:#dfd">    string readMessage(HANDLE hSerial) override {
+        return "Hello, World!";
+    }</span>
+};
+
+<span style = "background-color:#dfd">TEST(SerialPortTest, OpenSerialPortFails) {
+    MockSerialPort mockSerial;
+    HANDLE handle = mockSerial.openSerialPort(L"COM1", 9600);
+    EXPECT_EQ(handle, INVALID_HANDLE_VALUE);
+}</span>
+
+<span style = "background-color:#dfd">TEST(SerialPortTest, SendMessageFails) {
+    MockSerialPort mockSerial;
+    HANDLE mockHandle = (HANDLE)1;
+    string message = "Hello, World!";</span>
+
+<span style = "background-color:#dfd">    mockSerial.sendMessage(mockHandle, message);
+    EXPECT_EQ(GetLastError(), ERROR_IO_DEVICE);
+}</span>
+
+<span style = "background-color:#dfd">TEST(SerialPortTest, ReadMessageReturnsCorrectData) {
+    MockSerialPort mockSerial;
+    HANDLE mockHandle = (HANDLE)1;
+    string expectedMessage = "Hello, World!";
+    string actualMessage = mockSerial.readMessage(mockHandle);
+    EXPECT_EQ(actualMessage, expectedMessage);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, OpenSerialPortFailsWhenInvalidPort) {
+    GameLogic gameLogic;
+    HANDLE handle = gameLogic.openSerialPort(L"COM1", 9600);
+    EXPECT_EQ(handle, INVALID_HANDLE_VALUE);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, SetAndGetComPort) {
+    GameLogic gameLogic;
+    string testComPort = "COM9";
+    gameLogic.setSelectedComPort(testComPort);
+    EXPECT_EQ(gameLogic.getSelectedComPort(), testComPort);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, SetAndGetMove) {
+    GameLogic gameLogic;
+    int testMove = 5;
+    gameLogic.setSelectedMove(testMove);
+    EXPECT_EQ(gameLogic.getSelectedMove(), testMove);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, SetAndGetBaudRate) {
+    GameLogic gameLogic;
+    DWORD testBaudRate = 9600;
+    gameLogic.setBaudRate(testBaudRate);
+    EXPECT_EQ(gameLogic.getBaudRate(), testBaudRate);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, UpdateGameStateFailsWhenComPortIsInvalid) {
+    GameLogic gameLogic;
+    gameLogic.setComPort(INVALID_HANDLE_VALUE);
+    EXPECT_FALSE(gameLogic.updateGameState());
+    EXPECT_FALSE(gameLogic.updateGameState('X', 1, 1, "game.xml"));
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, UpdateGameStateSucceedsWhenComPortIsValid) {
+    GameLogic gameLogic;
+    HANDLE validHandle = (HANDLE)1;
+    gameLogic.setComPort(validHandle);
+    EXPECT_TRUE(gameLogic.updateGameState());
+    EXPECT_TRUE(gameLogic.updateGameState('X', 1, 1, "game.xml"));
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, GetComPort) {
+    GameLogic gameLogic;
+    HANDLE testHandle = (HANDLE)1;
+    gameLogic.setComPort(testHandle);
+    EXPECT_EQ(gameLogic.getComPort(), testHandle);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, GetFilePath) {
+    GameLogic gameLogic;
+    string expectedFilePath = "config.xml";
+    gameLogic.setFilePath(expectedFilePath);
+    string actualFilePath = gameLogic.getFilePath();
+    EXPECT_EQ(actualFilePath, expectedFilePath);
+}</span>
+
+<span style = "background-color:#dfd">TEST(GameLogicTest, GetSelectedType) {
+    GameLogic gameLogic;
+    string expectedType = "Man vs Man";
+    gameLogic.setSelectedType(expectedType);
+    string actualType = gameLogic.getSelectedType();
+    EXPECT_EQ(actualType, expectedType);
+}</span>
+
+<span style = "background-color:#dfd">int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&amp;argc, argv);
+    return RUN_ALL_TESTS();
+}</span></pre>
+        <hr />
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th align="center">
+                        <small>Generated by</small>
+                        <a href="https://github.com/OpenCppCoverage/OpenCppCoverage/releases">
+                            <strong>OpenCppCoverage (Version: 0.9.9.0)</strong>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
