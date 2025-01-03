@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_game_logic_8h" kind="file" language="C++">
+    <compoundname>GameLogic.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">tinyxml2.h</includes>
+    <includedby refid="_game_logic_8cpp" local="yes">D:/test/src/client/client/GameLogic.cpp</includedby>
+    <includedby refid="_game_main_8cpp" local="yes">D:/test/src/client/client/GameMain.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/test/src/client/client/GameLogic.h</label>
+        <link refid="_game_logic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>tinyxml2.h</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/test/src/client/client/GameLogic.cpp</label>
+        <link refid="_game_logic_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/test/src/client/client/GameLogic.h</label>
+        <link refid="_game_logic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/test/src/client/client/GameMain.cpp</label>
+        <link refid="_game_main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <innernamespace refid="namespacetinyxml2">tinyxml2</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_game_logic_8h_1a88b1015f889477fdec8f28a23d9da68e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parseGameStateXML</definition>
+        <argsstring>(const string &amp;filename, char &amp;firstPlayer, string &amp;gameMode, vector&lt; vector&lt; char &gt; &gt; &amp;board, string &amp;gameStatus)</argsstring>
+        <name>parseGameStateXML</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>char &amp;</type>
+          <declname>firstPlayer</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>gameMode</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; char &gt; &gt; &amp;</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>gameStatus</declname>
+        </param>
+        <briefdescription>
+<para>Parses the game state from an XML file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function loads an XML file containing the game state and parses the relevant details, including the first player, the game mode, the current board state, and the game status.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the XML file to load. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstPlayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player who will make the first move (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of game being played (e.g., &quot;Man vs Man&quot;, &quot;AI vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 game board represented as a 2D vector of characters (&apos;X&apos;, &apos;O&apos;, &apos;_&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current status of the game (e.g., &quot;Start&quot;, &quot;Game Over&quot;).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Parses the game state from an XML file.</para>
+<para>This function loads a specified XML file and extracts the game state, including the first player, game type, board state, and game status. The parsed values are stored in the provided references.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the XML file to load. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstPlayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a character where the first player (&apos;X&apos; or &apos;O&apos;) will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a string where the game mode (e.g., &quot;Man vs Man&quot;) will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a 2D vector of characters representing the board state. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a string where the game status (e.g., &quot;Start&quot;) will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="29" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="15" bodyend="63" declfile="D:/test/src/client/client/GameLogic.h" declline="29" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a7e673c15effd00c0c496cee95c1df44c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateXML</definition>
+        <argsstring>(const string &amp;player, const string &amp;gameType, const vector&lt; vector&lt; char &gt; &gt; &amp;board)</argsstring>
+        <name>updateXML</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>gameType</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; char &gt; &gt; &amp;</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+<para>Updates the XML file with the current game state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the updated game state (current player, game type, board) to an XML file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current player (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of game being played (e.g., &quot;Man vs Man&quot;, &quot;AI vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 game board represented as a 2D vector of characters (&apos;X&apos;, &apos;O&apos;, &apos;_&apos;).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Updates the XML file with the current game state.</para>
+<para>This function writes the current player, game type, and board state to an XML file. It creates or overwrites the &quot;game_state.xml&quot; file with the updated information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current player (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current game type (e.g., &quot;Man vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 2D vector representing the current state of the game board. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="40" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="75" bodyend="87" declfile="D:/test/src/client/client/GameLogic.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1abfae4796665591512de361013cf765c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createGameStateXML</definition>
+        <argsstring>(const string &amp;filename, char firstPlayer, const string &amp;gameMode, const vector&lt; vector&lt; char &gt; &gt; &amp;board)</argsstring>
+        <name>createGameStateXML</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>firstPlayer</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>gameMode</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; char &gt; &gt; &amp;</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new XML file with the initial game state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates an XML file containing the initial game state with player settings, game type, and an empty 3x3 game board.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the XML file to create. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstPlayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player who will make the first move (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of game being played (e.g., &quot;Man vs Man&quot;, &quot;AI vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 game board represented as a 2D vector of characters (&apos;X&apos;, &apos;O&apos;, &apos;_&apos;).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Creates a new XML file with the initial game state.</para>
+<para>This function generates a new XML file with the provided first player, game type, and board state. The game status is set to &quot;Start&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the XML file to create. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstPlayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first player (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game type (e.g., &quot;Man vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 2D vector representing the initial state of the game board. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="53" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="100" bodyend="119" declfile="D:/test/src/client/client/GameLogic.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a0e1af27fb4f0471b4ca5f124fe2426b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string readFileToString</definition>
+        <argsstring>(const string &amp;fileName)</argsstring>
+        <name>readFileToString</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Reads the contents of a file into a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads the entire content of the given file and returns it as a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the file to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The contents of the file as a string.</para>
+</simplesect>
+Reads the contents of a file into a string.</para>
+<para>This function opens a specified file, reads its contents, and returns them as a single string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string The contents of the file as a string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="63" column="8" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="129" bodyend="138" declfile="D:/test/src/client/client/GameLogic.h" declline="63" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a5b3775c56f2e98b99a5325dae43cdab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char selectFirstPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>selectFirstPlayer</name>
+        <briefdescription>
+<para>Prompts the user to select which player goes first. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function prompts the user to choose whether &apos;X&apos; or &apos;O&apos; goes first, or it randomly selects a player.</para>
+<para><simplesect kind="return"><para>The character representing the first player (&apos;X&apos; or &apos;O&apos;).</para>
+</simplesect>
+Prompts the user to select which player goes first.</para>
+<para>This function asks the user whether &apos;X&apos; or &apos;O&apos; should go first, or if it should be chosen randomly. It returns a character (&apos;X&apos; or &apos;O&apos;) based on the user&apos;s choice or random selection.</para>
+<para><simplesect kind="return"><para>char The player (&apos;X&apos; or &apos;O&apos;) who will make the first move. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="72" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="148" bodyend="163" declfile="D:/test/src/client/client/GameLogic.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a2a8076e5c14815a1626fafe18c5fc963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string selectGameMode</definition>
+        <argsstring>()</argsstring>
+        <name>selectGameMode</name>
+        <briefdescription>
+<para>Prompts the user to select the game mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function allows the user to choose the game mode (e.g., &quot;Man vs Man&quot;, &quot;AI vs Man&quot;).</para>
+<para><simplesect kind="return"><para>The selected game mode as a string.</para>
+</simplesect>
+This function asks the user to choose the type of game to play, such as &apos;Man vs Man&apos;, &apos;Man vs AI&apos;, &apos;AI vs Man&apos;, or &apos;AI vs AI&apos;. It returns a string representing the selected game mode.</para>
+<para><simplesect kind="return"><para>string The selected game mode (e.g., &quot;Man vs Man&quot;, &quot;Man vs AI&quot;). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="81" column="8" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="173" bodyend="193" declfile="D:/test/src/client/client/GameLogic.h" declline="81" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a28bc108c5ae194bf6c757a236a935501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool makeMove</definition>
+        <argsstring>(vector&lt; vector&lt; char &gt; &gt; &amp;board, int move, char player)</argsstring>
+        <name>makeMove</name>
+        <param>
+          <type>vector&lt; vector&lt; char &gt; &gt; &amp;</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Makes a move on the Tic-Tac-Toe board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the game board with the specified player&apos;s move. It places the player&apos;s symbol (&apos;X&apos; or &apos;O&apos;) on the board at the position determined by the move number (1-9). If the cell is already occupied, the function returns <computeroutput>false</computeroutput>. Otherwise, it places the symbol and returns <computeroutput>true</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a 2D vector representing the game board. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The move number (1-9) representing the position on the board where the player wants to place their symbol. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the player (&apos;X&apos; or &apos;O&apos;) making the move. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the move was successful (the cell was empty and the symbol was placed), false otherwise (if the cell was already occupied). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="95" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="207" bodyend="217" declfile="D:/test/src/client/client/GameLogic.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_game_logic_8h_1a11a1d9c30e1ecc8c4590c619df0b97a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printBoard</definition>
+        <argsstring>(const vector&lt; vector&lt; char &gt; &gt; &amp;board)</argsstring>
+        <name>printBoard</name>
+        <param>
+          <type>const vector&lt; vector&lt; char &gt; &gt; &amp;</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+<para>Prints the current state of the Tic-Tac-Toe board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function outputs the current state of the game board to the console. It displays the 3x3 grid with each cell containing either an &apos;X&apos;, &apos;O&apos;, or an empty space (&apos;_&apos;). The board is visually formatted with lines separating the rows and columns for easier readability. The cells are colorized with green text.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a 2D vector representing the Tic-Tac-Toe game board. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/GameLogic.h" line="106" column="6" bodyfile="D:/test/src/client/client/GameLogic.cpp" bodystart="228" bodyend="241" declfile="D:/test/src/client/client/GameLogic.h" declline="106" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Contains functions for game logic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tinyxml2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">tinyxml2;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a88b1015f889477fdec8f28a23d9da68e" kindref="member">parseGameStateXML</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>firstPlayer,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>gameMode,<sp/>vector&lt;vector&lt;char&gt;&gt;&amp;<sp/>board,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>gameStatus);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a7e673c15effd00c0c496cee95c1df44c" kindref="member">updateXML</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>player,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>gameType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;char&gt;&gt;&amp;<sp/>board);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1abfae4796665591512de361013cf765c8" kindref="member">createGameStateXML</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>firstPlayer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>gameMode,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;char&gt;&gt;&amp;<sp/>board);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a0e1af27fb4f0471b4ca5f124fe2426b0" kindref="member">readFileToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>fileName);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a5b3775c56f2e98b99a5325dae43cdab2" kindref="member">selectFirstPlayer</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a2a8076e5c14815a1626fafe18c5fc963" kindref="member">selectGameMode</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a28bc108c5ae194bf6c757a236a935501" kindref="member">makeMove</ref>(vector&lt;vector&lt;char&gt;&gt;&amp;<sp/>board,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>move,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>player);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_game_logic_8h_1a11a1d9c30e1ecc8c4590c619df0b97a4" kindref="member">printBoard</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;char&gt;&gt;&amp;<sp/>board);</highlight></codeline>
+    </programlisting>
+    <location file="D:/test/src/client/client/GameLogic.h"/>
+  </compounddef>
+</doxygen>

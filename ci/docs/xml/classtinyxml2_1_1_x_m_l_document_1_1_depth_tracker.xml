@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker" kind="class" language="C++" prot="private">
+    <compoundname>tinyxml2::XMLDocument::DepthTracker</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1ab142a47709c83a3698af1470378b9385" prot="private" static="no" mutable="no">
+        <type><ref refid="classtinyxml2_1_1_x_m_l_document" kindref="compound">XMLDocument</ref> *</type>
+        <definition>XMLDocument* tinyxml2::XMLDocument::DepthTracker::_document</definition>
+        <argsstring></argsstring>
+        <name>_document</name>
+        <qualifiedname>tinyxml2::XMLDocument::DepthTracker::_document</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="1979" column="25" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="1979" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1ac2782a163c2da773b84cb2c610b79bcb" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tinyxml2::XMLDocument::DepthTracker::DepthTracker</definition>
+        <argsstring>(XMLDocument *document)</argsstring>
+        <name>DepthTracker</name>
+        <qualifiedname>tinyxml2::XMLDocument::DepthTracker::DepthTracker</qualifiedname>
+        <param>
+          <type><ref refid="classtinyxml2_1_1_x_m_l_document" kindref="compound">XMLDocument</ref> *</type>
+          <declname>document</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="1971" column="22" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="1971" bodyend="1974"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1a0a5bde3f2443c73b833852c43dd2b1d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tinyxml2::XMLDocument::DepthTracker::~DepthTracker</definition>
+        <argsstring>()</argsstring>
+        <name>~DepthTracker</name>
+        <qualifiedname>tinyxml2::XMLDocument::DepthTracker::~DepthTracker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="1975" column="13" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="1975" bodyend="1977"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>tinyxml2::DynArray&lt; tinyxml2::MemPoolT::Block *, 10 &gt;</label>
+        <link refid="classtinyxml2_1_1_dyn_array"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>_mem</edgelabel>
+          <edgelabel>_pool</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>tinyxml2::DynArray&lt; tinyxml2::XMLNode *, 10 &gt;</label>
+        <link refid="classtinyxml2_1_1_dyn_array"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_mem</edgelabel>
+          <edgelabel>_pool</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tinyxml2::MemPool</label>
+        <link refid="classtinyxml2_1_1_mem_pool"/>
+      </node>
+      <node id="9">
+        <label>tinyxml2::MemPoolT&lt; ITEM_SIZE &gt;::Block</label>
+        <link refid="structtinyxml2_1_1_mem_pool_t_1_1_block"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>items</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>tinyxml2::MemPoolT&lt; ITEM_SIZE &gt;::Item</label>
+        <link refid="uniontinyxml2_1_1_mem_pool_t_1_1_item"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLAttribute) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_blockPtrs</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>_root</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLComment) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_blockPtrs</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>_root</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLElement) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_blockPtrs</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>_root</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLText) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_blockPtrs</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>_root</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tinyxml2::StrPair</label>
+        <link refid="classtinyxml2_1_1_str_pair"/>
+      </node>
+      <node id="2">
+        <label>tinyxml2::XMLDocument</label>
+        <link refid="classtinyxml2_1_1_x_m_l_document"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_errorStr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>_unlinked</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>_elementPool</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>_attributePool</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>_textPool</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>_commentPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tinyxml2::XMLDocument::DepthTracker</label>
+        <link refid="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_document</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tinyxml2::XMLNode</label>
+        <link refid="classtinyxml2_1_1_x_m_l_node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_document</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_firstChild</edgelabel>
+          <edgelabel>_lastChild</edgelabel>
+          <edgelabel>_next</edgelabel>
+          <edgelabel>_parent</edgelabel>
+          <edgelabel>_prev</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_value</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_memPool</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/test/src/client/client/tinyxml2.h" line="1969" column="9" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="1969" bodyend="1980"/>
+    <listofallmembers>
+      <member refid="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1ab142a47709c83a3698af1470378b9385" prot="private" virt="non-virtual"><scope>tinyxml2::XMLDocument::DepthTracker</scope><name>_document</name></member>
+      <member refid="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1ac2782a163c2da773b84cb2c610b79bcb" prot="public" virt="non-virtual"><scope>tinyxml2::XMLDocument::DepthTracker</scope><name>DepthTracker</name></member>
+      <member refid="classtinyxml2_1_1_x_m_l_document_1_1_depth_tracker_1a0a5bde3f2443c73b833852c43dd2b1d6" prot="public" virt="non-virtual"><scope>tinyxml2::XMLDocument::DepthTracker</scope><name>~DepthTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

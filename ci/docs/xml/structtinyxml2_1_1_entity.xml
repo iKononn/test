@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structtinyxml2_1_1_entity" kind="struct" language="C++" prot="public">
+    <compoundname>tinyxml2::Entity</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtinyxml2_1_1_entity_1ab330f5d665d29bfc811ecfa76315894b" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* tinyxml2::Entity::pattern</definition>
+        <argsstring></argsstring>
+        <name>pattern</name>
+        <qualifiedname>tinyxml2::Entity::pattern</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.cpp" line="137" column="20" bodyfile="D:/test/src/client/client/tinyxml2.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtinyxml2_1_1_entity_1a25e2b57cb59cb4fa68f283d7cb570f21" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tinyxml2::Entity::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>tinyxml2::Entity::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.cpp" line="138" column="13" bodyfile="D:/test/src/client/client/tinyxml2.cpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtinyxml2_1_1_entity_1a7334e81e33b4615655a403711b24f3ed" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char tinyxml2::Entity::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>tinyxml2::Entity::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.cpp" line="139" column="14" bodyfile="D:/test/src/client/client/tinyxml2.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/test/src/client/client/tinyxml2.cpp" line="136" column="5" bodyfile="D:/test/src/client/client/tinyxml2.cpp" bodystart="136" bodyend="140"/>
+    <listofallmembers>
+      <member refid="structtinyxml2_1_1_entity_1a25e2b57cb59cb4fa68f283d7cb570f21" prot="public" virt="non-virtual"><scope>tinyxml2::Entity</scope><name>length</name></member>
+      <member refid="structtinyxml2_1_1_entity_1ab330f5d665d29bfc811ecfa76315894b" prot="public" virt="non-virtual"><scope>tinyxml2::Entity</scope><name>pattern</name></member>
+      <member refid="structtinyxml2_1_1_entity_1a7334e81e33b4615655a403711b24f3ed" prot="public" virt="non-virtual"><scope>tinyxml2::Entity</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

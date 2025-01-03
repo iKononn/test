@@ -1,0 +1,684 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="server_8ino" kind="file" language="C++">
+    <compoundname>server.ino</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkWin</definition>
+        <argsstring>(char player, char board[3][3])</argsstring>
+        <name>checkWin</name>
+        <param>
+          <type>char</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Checks if a player has won. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks all possible combinations for a player to win on a 3x3 board.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player&apos;s symbol (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the player has won, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="10" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="10" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a77d598e94d7083003881981c0d072580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkDraw</definition>
+        <argsstring>(char board[3][3])</argsstring>
+        <name>checkDraw</name>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Checks if the game has resulted in a draw. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the board is full and no player has won, indicating a draw.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the game is a draw, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="36" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="36" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a784ab6f78ee4646a17e5703b2c8a60c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aiMove</definition>
+        <argsstring>(char aiSymbol, char board[3][3])</argsstring>
+        <name>aiMove</name>
+        <param>
+          <type>char</type>
+          <declname>aiSymbol</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Makes a random move for the AI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects an empty spot on the board and places the AI&apos;s symbol there.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aiSymbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AI&apos;s symbol (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="55" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a94beca20e939828e6e0f66157e127764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aiMoveWithDynamicWeights</definition>
+        <argsstring>(char aiSymbol, char board[3][3])</argsstring>
+        <name>aiMoveWithDynamicWeights</name>
+        <param>
+          <type>char</type>
+          <declname>aiSymbol</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Makes a move for the AI with dynamic weights. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The AI attempts to win or block the opponent from winning. If no such move is possible, it selects the best move based on predefined weights.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aiSymbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AI&apos;s symbol (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="73" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="73" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateGameStateStatus</definition>
+        <argsstring>(char board[3][3], char *status)</argsstring>
+        <name>updateGameStateStatus</name>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Updates the game status based on the current board state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines whether the game is still ongoing, or if there&apos;s a winner or a draw.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current game status (Win X, Win O, Draw, NextMove). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="132" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="132" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void extractTextBetweenTags</definition>
+        <argsstring>(const char *xml, const char *tag, char *output, int outputSize)</argsstring>
+        <name>extractTextBetweenTags</name>
+        <param>
+          <type>const char *</type>
+          <declname>xml</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outputSize</declname>
+        </param>
+        <briefdescription>
+<para>Extracts text between specified XML tags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extracts the value enclosed between &lt;tag&gt; and &lt;/tag&gt; in the provided XML string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The XML string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag name (e.g., &quot;Player&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to store the extracted text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the output buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="154" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="154" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1ad20f9407dee9d14da26318f03a3d10ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void extractBoard</definition>
+        <argsstring>(const char *xml, char board[3][3])</argsstring>
+        <name>extractBoard</name>
+        <param>
+          <type>const char *</type>
+          <declname>xml</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Extracts the game board from the provided XML data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extracts a 3x3 game board from the XML string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The XML string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board (3x3 array) to populate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="184" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="184" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1af543b02f2ab54392977fccd6439e93de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void readAndUpdateGameLogic</definition>
+        <argsstring>(const String &amp;xmlData)</argsstring>
+        <name>readAndUpdateGameLogic</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>xmlData</declname>
+        </param>
+        <briefdescription>
+<para>Reads the XML game data and updates the game logic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function parses the XML data, updates the game state, and makes AI moves when needed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmlData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game data in XML format. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="212" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="212" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a318b4d282b5319dc268232a878ce8ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportGameStateXML</definition>
+        <argsstring>(const char *player, const char *gameType, const char *status, char board[3][3])</argsstring>
+        <name>exportGameStateXML</name>
+        <param>
+          <type>const char *</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>gameType</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>board</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+<para>Exports the game state to XML format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts the current game state (player, game type, status, and board) to XML format and sends it to the serial output.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current player (&apos;X&apos; or &apos;O&apos;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of game (e.g., &quot;Man vs Man&quot;, &quot;AI vs Man&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current game status (e.g., &quot;NextMove&quot;, &quot;Win X&quot;, &quot;Draw&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current game board (3x3 array). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="271" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="271" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+<para>Initializes the game and serial communication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the serial communication and sets the random seed based on analog input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="302" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="server_8ino_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>Main game loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Continuously checks for incoming data, reads and processes the XML data, updates the game state, and exports the updated game state back to the serial output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/server/server.ino" line="313" column="6" bodyfile="D:/test/src/server/server.ino" bodystart="313" bodyend="323"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kindref="member">checkWin</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>player,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][0]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[i][1]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[i][2]<sp/>==<sp/>player)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[0][i]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[1][i]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[2][i]<sp/>==<sp/>player)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((board[0][0]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[1][1]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[2][2]<sp/>==<sp/>player)<sp/>||<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(board[0][2]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[1][1]<sp/>==<sp/>player<sp/>&amp;&amp;<sp/>board[2][0]<sp/>==<sp/>player))<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a77d598e94d7083003881981c0d072580" kindref="member">checkDraw</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][j]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a784ab6f78ee4646a17e5703b2c8a60c3" kindref="member">aiMove</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aiSymbol,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/>col;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>row<sp/>=<sp/>random(0,<sp/>3);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>col<sp/>=<sp/>random(0,<sp/>3);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(board[row][col]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>board[row][col]<sp/>=<sp/>aiSymbol;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a94beca20e939828e6e0f66157e127764" kindref="member">aiMoveWithDynamicWeights</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aiSymbol,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Try<sp/>to<sp/>win</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][j]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j]<sp/>=<sp/>aiSymbol;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kindref="member">checkWin</ref>(board,<sp/>aiSymbol))<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Block<sp/>opponent<sp/>from<sp/>winning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][j]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>playerSymbol<sp/>=<sp/>(aiSymbol<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;O&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j]<sp/>=<sp/>playerSymbol;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kindref="member">checkWin</ref>(board,<sp/>playerSymbol))<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j]<sp/>=<sp/>aiSymbol;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Select<sp/>the<sp/>best<sp/>move<sp/>based<sp/>on<sp/>predefined<sp/>weights</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>weights[3][3]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>3,<sp/>1,<sp/>3<sp/>},</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>1,<sp/>5,<sp/>1<sp/>},</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>3,<sp/>1,<sp/>3<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bestRow<sp/>=<sp/>-1,<sp/>bestCol<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxWeight<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][j]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>weights[i][j]<sp/>&gt;<sp/>maxWeight)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxWeight<sp/>=<sp/>weights[i][j];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bestRow<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bestCol<sp/>=<sp/>j;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bestRow<sp/>!=<sp/>-1<sp/>&amp;&amp;<sp/>bestCol<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>board[bestRow][bestCol]<sp/>=<sp/>aiSymbol;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3],<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>status)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kindref="member">checkWin</ref>(</highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">,<sp/>board))<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>X&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kindref="member">checkWin</ref>(</highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal">,<sp/>board))<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>O&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="server_8ino_1a77d598e94d7083003881981c0d072580" kindref="member">checkDraw</ref>(board))<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(status,<sp/></highlight><highlight class="stringliteral">&quot;Draw&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(status,<sp/></highlight><highlight class="stringliteral">&quot;NextMove&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" kindref="member">extractTextBetweenTags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>xml,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>output,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>outputSize)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>openTag[20];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>closeTag[20];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>snprintf(openTag,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(openTag),<sp/></highlight><highlight class="stringliteral">&quot;&lt;%s&gt;&quot;</highlight><highlight class="normal">,<sp/>tag);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>snprintf(closeTag,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(closeTag),<sp/></highlight><highlight class="stringliteral">&quot;&lt;/%s&gt;&quot;</highlight><highlight class="normal">,<sp/>tag);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>startPos<sp/>=<sp/>strstr(xml,<sp/>openTag);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!startPos)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>output[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>startPos<sp/>+=<sp/>strlen(openTag);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>endPos<sp/>=<sp/>strstr(startPos,<sp/>closeTag);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!endPos)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>output[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>endPos<sp/>-<sp/>startPos;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&gt;=<sp/>outputSize)<sp/>length<sp/>=<sp/>outputSize<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>strncpy(output,<sp/>startPos,<sp/>length);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>output[length]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1ad20f9407dee9d14da26318f03a3d10ca" kindref="member">extractBoard</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>xml,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>boardStart<sp/>=<sp/>strstr(xml,<sp/></highlight><highlight class="stringliteral">&quot;&lt;Board&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!boardStart)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rowPos<sp/>=<sp/>boardStart;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(row<sp/>&lt;<sp/>3<sp/>&amp;&amp;<sp/>(rowPos<sp/>=<sp/>strstr(rowPos,<sp/></highlight><highlight class="stringliteral">&quot;&lt;Row&gt;&quot;</highlight><highlight class="normal">)))<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cellPos<sp/>=<sp/>rowPos;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(col<sp/>&lt;<sp/>3<sp/>&amp;&amp;<sp/>(cellPos<sp/>=<sp/>strstr(cellPos,<sp/></highlight><highlight class="stringliteral">&quot;&lt;Cell&gt;&quot;</highlight><highlight class="normal">)))<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cellPos<sp/>+=<sp/>6;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cellEnd<sp/>=<sp/>strstr(cellPos,<sp/></highlight><highlight class="stringliteral">&quot;&lt;/Cell&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cellEnd)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>board[row][col]<sp/>=<sp/>*cellPos;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>col++;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cellPos<sp/>=<sp/>cellEnd;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>row++;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>rowPos<sp/>=<sp/>strstr(rowPos,<sp/></highlight><highlight class="stringliteral">&quot;&lt;/Row&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1af543b02f2ab54392977fccd6439e93de" kindref="member">readAndUpdateGameLogic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String&amp;<sp/>xmlData)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>player[2];</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>gameType[20];</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>status[10];</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3];</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>xmlCString<sp/>=<sp/>xmlData.c_str();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><ref refid="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" kindref="member">extractTextBetweenTags</ref>(xmlCString,<sp/></highlight><highlight class="stringliteral">&quot;Player&quot;</highlight><highlight class="normal">,<sp/>player,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(player));</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" kindref="member">extractTextBetweenTags</ref>(xmlCString,<sp/></highlight><highlight class="stringliteral">&quot;GameType&quot;</highlight><highlight class="normal">,<sp/>gameType,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(gameType));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><ref refid="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" kindref="member">extractTextBetweenTags</ref>(xmlCString,<sp/></highlight><highlight class="stringliteral">&quot;Status&quot;</highlight><highlight class="normal">,<sp/>status,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(status));</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><ref refid="server_8ino_1ad20f9407dee9d14da26318f03a3d10ca" kindref="member">extractBoard</ref>(xmlCString,<sp/>board);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(gameType,<sp/></highlight><highlight class="stringliteral">&quot;Man<sp/>vs<sp/>Man&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;NextMove&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(gameType,<sp/></highlight><highlight class="stringliteral">&quot;AI<sp/>vs<sp/>Man&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;NextMove&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>X&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>O&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Draw&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a94beca20e939828e6e0f66157e127764" kindref="member">aiMoveWithDynamicWeights</ref>(player[0],<sp/>board);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(gameType,<sp/></highlight><highlight class="stringliteral">&quot;Man<sp/>vs<sp/>AI&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;NextMove&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>X&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>O&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Draw&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a94beca20e939828e6e0f66157e127764" kindref="member">aiMoveWithDynamicWeights</ref>(player[0],<sp/>board);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(gameType,<sp/></highlight><highlight class="stringliteral">&quot;AI<sp/>vs<sp/>AI&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>||<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;NextMove&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>X&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>O&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Draw&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>9;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>X&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Win<sp/>O&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>strcmp(status,<sp/></highlight><highlight class="stringliteral">&quot;Draw&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a784ab6f78ee4646a17e5703b2c8a60c3" kindref="member">aiMove</ref>(player[0],<sp/>board);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player[0]<sp/>=<sp/>(player[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;X&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kindref="member">updateGameStateStatus</ref>(board,<sp/>status);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><ref refid="server_8ino_1a318b4d282b5319dc268232a878ce8ec8" kindref="member">exportGameStateXML</ref>(player,<sp/>gameType,<sp/>status,<sp/>board);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a318b4d282b5319dc268232a878ce8ec8" kindref="member">exportGameStateXML</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>player,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>gameType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>status,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>board[3][3])<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;?xml<sp/>version=\&quot;1.0\&quot;<sp/>encoding=\&quot;utf-8\&quot;?&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;GameState&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;Player&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>Serial.print(player);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/Player&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;GameType&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>Serial.print(gameType);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/GameType&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;Board&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;Row&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;Cell&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(board[i][j]);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/Cell&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/Row&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/Board&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;Status&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>Serial.print(status);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/Status&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;&lt;/GameState&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>Serial.begin(9600);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/>randomSeed(analogRead(0));</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_8ino_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Serial.available()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>xmlData<sp/>=<sp/>Serial.readStringUntil(</highlight><highlight class="stringliteral">&apos;\r\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xmlData.indexOf(</highlight><highlight class="stringliteral">&quot;&lt;/GameState&gt;&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="server_8ino_1af543b02f2ab54392977fccd6439e93de" kindref="member">readAndUpdateGameLogic</ref>(xmlData);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Error:<sp/>&lt;/GameState&gt;<sp/>not<sp/>found.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/test/src/server/server.ino"/>
+  </compounddef>
+</doxygen>

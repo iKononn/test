@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="6" failures="0" disabled="0" errors="0" timestamp="2025-01-03T14:39:54" time="10.192" name="AllTests">
-  <testsuite name="ServerTest" tests="6" failures="0" disabled="0" errors="0" time="10.19">
-    <testcase name="TestInitialGameState" status="run" time="1.703" classname="ServerTest" />
-    <testcase name="TestGameStateUpdate" status="run" time="1.693" classname="ServerTest" />
-    <testcase name="TestFirstMoveGameState" status="run" time="1.7" classname="ServerTest" />
-    <testcase name="TestDrawGameState" status="run" time="1.684" classname="ServerTest" />
-    <testcase name="TestPlayerXWin" status="run" time="1.697" classname="ServerTest" />
-    <testcase name="TestTurnSwitching" status="run" time="1.703" classname="ServerTest" />
+<testsuites tests="6" failures="0" disabled="0" errors="0" timestamp="2025-01-03T14:56:09" time="10.238" name="AllTests">
+  <testsuite name="ServerTest" tests="6" failures="0" disabled="0" errors="0" time="10.226">
+    <testcase name="TestInitialGameState" status="run" time="1.706" classname="ServerTest" />
+    <testcase name="TestGameStateUpdate" status="run" time="1.708" classname="ServerTest" />
+    <testcase name="TestFirstMoveGameState" status="run" time="1.705" classname="ServerTest" />
+    <testcase name="TestDrawGameState" status="run" time="1.687" classname="ServerTest" />
+    <testcase name="TestPlayerXWin" status="run" time="1.702" classname="ServerTest" />
+    <testcase name="TestTurnSwitching" status="run" time="1.711" classname="ServerTest" />
   </testsuite>
 </testsuites>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespacetinyxml2" kind="namespace"><name>tinyxml2</name>
+  </compound>
+  <compound refid="_game_logic_8cpp" kind="file"><name>GameLogic.cpp</name>
+    <member refid="_game_logic_8cpp_1a88b1015f889477fdec8f28a23d9da68e" kind="function"><name>parseGameStateXML</name></member>
+    <member refid="_game_logic_8cpp_1a7e673c15effd00c0c496cee95c1df44c" kind="function"><name>updateXML</name></member>
+    <member refid="_game_logic_8cpp_1abfae4796665591512de361013cf765c8" kind="function"><name>createGameStateXML</name></member>
+    <member refid="_game_logic_8cpp_1a0e1af27fb4f0471b4ca5f124fe2426b0" kind="function"><name>readFileToString</name></member>
+    <member refid="_game_logic_8cpp_1a5b3775c56f2e98b99a5325dae43cdab2" kind="function"><name>selectFirstPlayer</name></member>
+    <member refid="_game_logic_8cpp_1a2a8076e5c14815a1626fafe18c5fc963" kind="function"><name>selectGameMode</name></member>
+    <member refid="_game_logic_8cpp_1a28bc108c5ae194bf6c757a236a935501" kind="function"><name>makeMove</name></member>
+    <member refid="_game_logic_8cpp_1a11a1d9c30e1ecc8c4590c619df0b97a4" kind="function"><name>printBoard</name></member>
+  </compound>
+  <compound refid="_game_logic_8h" kind="file"><name>GameLogic.h</name>
+    <member refid="_game_logic_8h_1a88b1015f889477fdec8f28a23d9da68e" kind="function"><name>parseGameStateXML</name></member>
+    <member refid="_game_logic_8h_1a7e673c15effd00c0c496cee95c1df44c" kind="function"><name>updateXML</name></member>
+    <member refid="_game_logic_8h_1abfae4796665591512de361013cf765c8" kind="function"><name>createGameStateXML</name></member>
+    <member refid="_game_logic_8h_1a0e1af27fb4f0471b4ca5f124fe2426b0" kind="function"><name>readFileToString</name></member>
+    <member refid="_game_logic_8h_1a5b3775c56f2e98b99a5325dae43cdab2" kind="function"><name>selectFirstPlayer</name></member>
+    <member refid="_game_logic_8h_1a2a8076e5c14815a1626fafe18c5fc963" kind="function"><name>selectGameMode</name></member>
+    <member refid="_game_logic_8h_1a28bc108c5ae194bf6c757a236a935501" kind="function"><name>makeMove</name></member>
+    <member refid="_game_logic_8h_1a11a1d9c30e1ecc8c4590c619df0b97a4" kind="function"><name>printBoard</name></member>
+  </compound>
+  <compound refid="_game_main_8cpp" kind="file"><name>GameMain.cpp</name>
+    <member refid="_game_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_serial_port_8cpp" kind="file"><name>SerialPort.cpp</name>
+    <member refid="_serial_port_8cpp_1aba21005ba55eaa15063aace08745f537" kind="function"><name>openSerialPort</name></member>
+    <member refid="_serial_port_8cpp_1a7e10a8858a30f45b39bc1b18904c5a15" kind="function"><name>sendMessage</name></member>
+    <member refid="_serial_port_8cpp_1a0c12408163c930823d6efa5dc4095533" kind="function"><name>readMessage</name></member>
+    <member refid="_serial_port_8cpp_1ad2b6dc672019e23dab7d591991aeaef1" kind="function"><name>selectPort</name></member>
+    <member refid="_serial_port_8cpp_1a127cadd593a5af64e10d94488978920b" kind="function"><name>selectBaudRate</name></member>
+  </compound>
+  <compound refid="_serial_port_8h" kind="file"><name>SerialPort.h</name>
+    <member refid="_serial_port_8h_1ae883446ccd8e3d1c49440f2579d89dc0" kind="define"><name>CBR_9600</name></member>
+    <member refid="_serial_port_8h_1aa8dfd552cc13c9770f4178c28cfa2109" kind="define"><name>CBR_19200</name></member>
+    <member refid="_serial_port_8h_1a354e1d2d7ec134fdd59906a0849ff44a" kind="define"><name>CBR_115200</name></member>
+    <member refid="_serial_port_8h_1aba21005ba55eaa15063aace08745f537" kind="function"><name>openSerialPort</name></member>
+    <member refid="_serial_port_8h_1a7e10a8858a30f45b39bc1b18904c5a15" kind="function"><name>sendMessage</name></member>
+    <member refid="_serial_port_8h_1a0c12408163c930823d6efa5dc4095533" kind="function"><name>readMessage</name></member>
+    <member refid="_serial_port_8h_1ad2b6dc672019e23dab7d591991aeaef1" kind="function"><name>selectPort</name></member>
+    <member refid="_serial_port_8h_1a127cadd593a5af64e10d94488978920b" kind="function"><name>selectBaudRate</name></member>
+  </compound>
+  <compound refid="server_8ino" kind="file"><name>server.ino</name>
+    <member refid="server_8ino_1ae9b4a6375311334d9aac9e6dc96d7f47" kind="function"><name>checkWin</name></member>
+    <member refid="server_8ino_1a77d598e94d7083003881981c0d072580" kind="function"><name>checkDraw</name></member>
+    <member refid="server_8ino_1a784ab6f78ee4646a17e5703b2c8a60c3" kind="function"><name>aiMove</name></member>
+    <member refid="server_8ino_1a94beca20e939828e6e0f66157e127764" kind="function"><name>aiMoveWithDynamicWeights</name></member>
+    <member refid="server_8ino_1a9a856a31d4baaff5926e73af2d3a23e7" kind="function"><name>updateGameStateStatus</name></member>
+    <member refid="server_8ino_1ac7282167064bb21c4dd57fc12c43f75b" kind="function"><name>extractTextBetweenTags</name></member>
+    <member refid="server_8ino_1ad20f9407dee9d14da26318f03a3d10ca" kind="function"><name>extractBoard</name></member>
+    <member refid="server_8ino_1af543b02f2ab54392977fccd6439e93de" kind="function"><name>readAndUpdateGameLogic</name></member>
+    <member refid="server_8ino_1a318b4d282b5319dc268232a878ce8ec8" kind="function"><name>exportGameStateXML</name></member>
+    <member refid="server_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="server_8ino_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_6908ff505388a07996d238c763adbdab" kind="dir"><name>D:/test/src/client</name>
+  </compound>
+  <compound refid="dir_90aab63e5651e12e9a252aa55928aa74" kind="dir"><name>D:/test/src/client/client</name>
+  </compound>
+  <compound refid="dir_075bb3ff235063c77951cd176d15a741" kind="dir"><name>D:/test/src/server</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>D:/test/src</name>
+  </compound>
+</doxygenindex>

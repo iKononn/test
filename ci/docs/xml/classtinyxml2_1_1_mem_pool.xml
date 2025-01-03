@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classtinyxml2_1_1_mem_pool" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>tinyxml2::MemPool</compoundname>
+    <derivedcompoundref refid="classtinyxml2_1_1_mem_pool_t" prot="public" virt="non-virtual">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLElement) &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtinyxml2_1_1_mem_pool_t" prot="public" virt="non-virtual">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLAttribute) &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtinyxml2_1_1_mem_pool_t" prot="public" virt="non-virtual">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLText) &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtinyxml2_1_1_mem_pool_t" prot="public" virt="non-virtual">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLComment) &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtinyxml2_1_1_mem_pool_t" prot="public" virt="non-virtual">tinyxml2::MemPoolT&lt; ITEM_SIZE &gt;</derivedcompoundref>
+    <includes refid="tinyxml2_8h" local="no">tinyxml2.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1a9101a0083d7370c85bd5aaaba7157f84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tinyxml2::MemPool::MemPool</definition>
+        <argsstring>()</argsstring>
+        <name>MemPool</name>
+        <qualifiedname>tinyxml2::MemPool::MemPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="330" column="9" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="330" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1ae55ad9e3faeca702e6ccbb38fdbcad72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tinyxml2::MemPool::~MemPool</definition>
+        <argsstring>()</argsstring>
+        <name>~MemPool</name>
+        <qualifiedname>tinyxml2::MemPool::~MemPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="331" column="17" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="331" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1a6fdd3842fcf01f2be8f74e9536437e8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t tinyxml2::MemPool::ItemSize</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ItemSize</name>
+        <qualifiedname>tinyxml2::MemPool::ItemSize</qualifiedname>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a8825686dd6897387e207c94a02c2d266">ItemSize</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a8825686dd6897387e207c94a02c2d266">ItemSize</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a8825686dd6897387e207c94a02c2d266">ItemSize</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a8825686dd6897387e207c94a02c2d266">ItemSize</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a8825686dd6897387e207c94a02c2d266">ItemSize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="333" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1a38227917fac8d37181e2fa83c65d9b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void * tinyxml2::MemPool::Alloc</definition>
+        <argsstring>()=0</argsstring>
+        <name>Alloc</name>
+        <qualifiedname>tinyxml2::MemPool::Alloc</qualifiedname>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a84012b560f43bec59f212e4b8dfb4791">Alloc</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a84012b560f43bec59f212e4b8dfb4791">Alloc</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a84012b560f43bec59f212e4b8dfb4791">Alloc</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a84012b560f43bec59f212e4b8dfb4791">Alloc</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a84012b560f43bec59f212e4b8dfb4791">Alloc</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="334" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1a49e3bfac2cba2ebd6776b31e571f64f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void tinyxml2::MemPool::Free</definition>
+        <argsstring>(void *)=0</argsstring>
+        <name>Free</name>
+        <qualifiedname>tinyxml2::MemPool::Free</qualifiedname>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a598f0d299d8deda1f0c5012ab12e956a">Free</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a598f0d299d8deda1f0c5012ab12e956a">Free</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a598f0d299d8deda1f0c5012ab12e956a">Free</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a598f0d299d8deda1f0c5012ab12e956a">Free</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a598f0d299d8deda1f0c5012ab12e956a">Free</reimplementedby>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="335" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classtinyxml2_1_1_mem_pool_1ac5804dd1387b2e4de5eef710076a0db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void tinyxml2::MemPool::SetTracked</definition>
+        <argsstring>()=0</argsstring>
+        <name>SetTracked</name>
+        <qualifiedname>tinyxml2::MemPool::SetTracked</qualifiedname>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a5fa0b24bab04e52c300aabfd61a2a794">SetTracked</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a5fa0b24bab04e52c300aabfd61a2a794">SetTracked</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a5fa0b24bab04e52c300aabfd61a2a794">SetTracked</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a5fa0b24bab04e52c300aabfd61a2a794">SetTracked</reimplementedby>
+        <reimplementedby refid="classtinyxml2_1_1_mem_pool_t_1a5fa0b24bab04e52c300aabfd61a2a794">SetTracked</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/tinyxml2.h" line="336" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>tinyxml2::MemPool</label>
+        <link refid="classtinyxml2_1_1_mem_pool"/>
+      </node>
+      <node id="6">
+        <label>tinyxml2::MemPoolT&lt; ITEM_SIZE &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLAttribute) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLComment) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLElement) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLText) &gt;</label>
+        <link refid="classtinyxml2_1_1_mem_pool_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/test/src/client/client/tinyxml2.h" line="327" column="5" bodyfile="D:/test/src/client/client/tinyxml2.h" bodystart="328" bodyend="337"/>
+    <listofallmembers>
+      <member refid="classtinyxml2_1_1_mem_pool_1a38227917fac8d37181e2fa83c65d9b1e" prot="public" virt="pure-virtual"><scope>tinyxml2::MemPool</scope><name>Alloc</name></member>
+      <member refid="classtinyxml2_1_1_mem_pool_1a49e3bfac2cba2ebd6776b31e571f64f7" prot="public" virt="pure-virtual"><scope>tinyxml2::MemPool</scope><name>Free</name></member>
+      <member refid="classtinyxml2_1_1_mem_pool_1a6fdd3842fcf01f2be8f74e9536437e8a" prot="public" virt="pure-virtual"><scope>tinyxml2::MemPool</scope><name>ItemSize</name></member>
+      <member refid="classtinyxml2_1_1_mem_pool_1a9101a0083d7370c85bd5aaaba7157f84" prot="public" virt="non-virtual"><scope>tinyxml2::MemPool</scope><name>MemPool</name></member>
+      <member refid="classtinyxml2_1_1_mem_pool_1ac5804dd1387b2e4de5eef710076a0db1" prot="public" virt="pure-virtual"><scope>tinyxml2::MemPool</scope><name>SetTracked</name></member>
+      <member refid="classtinyxml2_1_1_mem_pool_1ae55ad9e3faeca702e6ccbb38fdbcad72" prot="public" virt="virtual"><scope>tinyxml2::MemPool</scope><name>~MemPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,33 @@
+\doxysection{Game\+Logic.\+h}
+\hypertarget{_game_logic_8h_source}{}\label{_game_logic_8h_source}\index{D:/test/src/client/client/GameLogic.h@{D:/test/src/client/client/GameLogic.h}}
+\mbox{\hyperlink{_game_logic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}tinyxml2.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }tinyxml2;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_logic_8h_a88b1015f889477fdec8f28a23d9da68e}{parseGameStateXML}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename,\ \textcolor{keywordtype}{char}\&\ firstPlayer,\ \textcolor{keywordtype}{string}\&\ gameMode,\ vector<vector<char>>\&\ board,\ \textcolor{keywordtype}{string}\&\ gameStatus);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_logic_8h_a7e673c15effd00c0c496cee95c1df44c}{updateXML}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ player,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ gameType,\ \textcolor{keyword}{const}\ vector<vector<char>>\&\ board);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_logic_8h_abfae4796665591512de361013cf765c8}{createGameStateXML}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename,\ \textcolor{keywordtype}{char}\ firstPlayer,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ gameMode,\ \textcolor{keyword}{const}\ vector<vector<char>>\&\ board);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_game_logic_8h_a0e1af27fb4f0471b4ca5f124fe2426b0}{readFileToString}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ fileName);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_game_logic_8h_a5b3775c56f2e98b99a5325dae43cdab2}{selectFirstPlayer}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_game_logic_8h_a2a8076e5c14815a1626fafe18c5fc963}{selectGameMode}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_game_logic_8h_a28bc108c5ae194bf6c757a236a935501}{makeMove}}(vector<vector<char>>\&\ board,\ \textcolor{keywordtype}{int}\ move,\ \textcolor{keywordtype}{char}\ player);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_logic_8h_a11a1d9c30e1ecc8c4590c619df0b97a4}{printBoard}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board);}
+
+\end{DoxyCode}

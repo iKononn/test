@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_serial_port_8h" kind="file" language="C++">
+    <compoundname>SerialPort.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_game_main_8cpp" local="yes">D:/test/src/client/client/GameMain.cpp</includedby>
+    <includedby refid="_serial_port_8cpp" local="yes">D:/test/src/client/client/SerialPort.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/test/src/client/client/SerialPort.h</label>
+        <link refid="_serial_port_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>windows.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/test/src/client/client/GameMain.cpp</label>
+        <link refid="_game_main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/test/src/client/client/SerialPort.cpp</label>
+        <link refid="_serial_port_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/test/src/client/client/SerialPort.h</label>
+        <link refid="_serial_port_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_serial_port_8h_1ae883446ccd8e3d1c49440f2579d89dc0" prot="public" static="no">
+        <name>CBR_9600</name>
+        <initializer>9600</initializer>
+        <briefdescription>
+<para>Baud rates constants for serial communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="19" column="9" bodyfile="D:/test/src/client/client/SerialPort.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_serial_port_8h_1aa8dfd552cc13c9770f4178c28cfa2109" prot="public" static="no">
+        <name>CBR_19200</name>
+        <initializer>19200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="20" column="9" bodyfile="D:/test/src/client/client/SerialPort.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_serial_port_8h_1a354e1d2d7ec134fdd59906a0849ff44a" prot="public" static="no">
+        <name>CBR_115200</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="21" column="9" bodyfile="D:/test/src/client/client/SerialPort.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_serial_port_8h_1aba21005ba55eaa15063aace08745f537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HANDLE</type>
+        <definition>HANDLE openSerialPort</definition>
+        <argsstring>(const wstring &amp;portName, DWORD baudRate)</argsstring>
+        <name>openSerialPort</name>
+        <param>
+          <type>const wstring &amp;</type>
+          <declname>portName</declname>
+        </param>
+        <param>
+          <type>DWORD</type>
+          <declname>baudRate</declname>
+        </param>
+        <briefdescription>
+<para>Opens a serial port with specified settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>portName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the port to open (e.g., &quot;COM1&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The baud rate for the serial communication (e.g., 9600, 115200).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HANDLE Handle to the opened serial port, or INVALID_HANDLE_VALUE if the operation fails.</para>
+</simplesect>
+This function initializes the serial port with the specified port name and baud rate. It configures the communication parameters such as baud rate, byte size, stop bits, and parity. The function also sets timeouts for read and write operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>portName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the port to open (e.g., &quot;COM1&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The baud rate for the serial communication (e.g., 9600, 115200).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HANDLE Handle to the opened serial port, or INVALID_HANDLE_VALUE if the operation fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="31" column="8" bodyfile="D:/test/src/client/client/SerialPort.cpp" bodystart="15" bodyend="57" declfile="D:/test/src/client/client/SerialPort.h" declline="31" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_serial_port_8h_1a7e10a8858a30f45b39bc1b18904c5a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMessage</definition>
+        <argsstring>(HANDLE hSerial, const string &amp;message)</argsstring>
+        <name>sendMessage</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>hSerial</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Sends a message to the serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hSerial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the serial port. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to send as a C-style string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function writes the given message to the serial port. It uses the <computeroutput>WriteFile</computeroutput> function to send the data and waits for the specified message length to be written.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hSerial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the serial port. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to send as a C-style string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="39" column="6" bodyfile="D:/test/src/client/client/SerialPort.cpp" bodystart="68" bodyend="72" declfile="D:/test/src/client/client/SerialPort.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_serial_port_8h_1a0c12408163c930823d6efa5dc4095533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string readMessage</definition>
+        <argsstring>(HANDLE hSerial)</argsstring>
+        <name>readMessage</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>hSerial</declname>
+        </param>
+        <briefdescription>
+<para>Reads a message from the serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hSerial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the serial port.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string The message read from the serial port.</para>
+</simplesect>
+This function reads data from the serial port and stores it in a buffer. It waits until a newline character (<computeroutput>\n</computeroutput>) is encountered, indicating the end of the message. The message is then returned as a <computeroutput>string</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hSerial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the serial port.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string The message read from the serial port. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="48" column="8" bodyfile="D:/test/src/client/client/SerialPort.cpp" bodystart="85" bodyend="99" declfile="D:/test/src/client/client/SerialPort.h" declline="48" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_serial_port_8h_1ad2b6dc672019e23dab7d591991aeaef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wstring</type>
+        <definition>wstring selectPort</definition>
+        <argsstring>()</argsstring>
+        <name>selectPort</name>
+        <briefdescription>
+<para>Prompts the user to select a COM port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function displays a list of available COM ports (COM1 to COM9) and prompts the user to select one by entering a number corresponding to the port. The selected port is returned as a wide string (e.g., L&quot;COM1&quot;).</para>
+<para><simplesect kind="return"><para>wstring The COM port selected by the user (e.g., L&quot;COM1&quot;). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="59" column="9" bodyfile="D:/test/src/client/client/SerialPort.cpp" bodystart="110" bodyend="133" declfile="D:/test/src/client/client/SerialPort.h" declline="59" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_serial_port_8h_1a127cadd593a5af64e10d94488978920b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DWORD</type>
+        <definition>DWORD selectBaudRate</definition>
+        <argsstring>()</argsstring>
+        <name>selectBaudRate</name>
+        <briefdescription>
+<para>Prompts the user to select a baud rate for serial communication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function displays a list of available baud rates (9600, 115200, 19200) and prompts the user to select one. The selected baud rate is returned as a DWORD value.</para>
+<para><simplesect kind="return"><para>DWORD The baud rate selected by the user (e.g., CBR_9600). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/test/src/client/client/SerialPort.h" line="69" column="7" bodyfile="D:/test/src/client/client/SerialPort.cpp" bodystart="143" bodyend="162" declfile="D:/test/src/client/client/SerialPort.h" declline="69" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Contains functions for serial port communication in Windows. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_serial_port_8h_1ae883446ccd8e3d1c49440f2579d89dc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CBR_9600<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9600</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_serial_port_8h_1aa8dfd552cc13c9770f4178c28cfa2109" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CBR_19200<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_serial_port_8h_1a354e1d2d7ec134fdd59906a0849ff44a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CBR_115200<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>115200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">HANDLE<sp/><ref refid="_serial_port_8h_1aba21005ba55eaa15063aace08745f537" kindref="member">openSerialPort</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wstring&amp;<sp/>portName,<sp/>DWORD<sp/>baudRate);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_serial_port_8h_1a7e10a8858a30f45b39bc1b18904c5a15" kindref="member">sendMessage</ref>(HANDLE<sp/>hSerial,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>message);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_serial_port_8h_1a0c12408163c930823d6efa5dc4095533" kindref="member">readMessage</ref>(HANDLE<sp/>hSerial);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">wstring<sp/><ref refid="_serial_port_8h_1ad2b6dc672019e23dab7d591991aeaef1" kindref="member">selectPort</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">DWORD<sp/><ref refid="_serial_port_8h_1a127cadd593a5af64e10d94488978920b" kindref="member">selectBaudRate</ref>();</highlight></codeline>
+    </programlisting>
+    <location file="D:/test/src/client/client/SerialPort.h"/>
+  </compounddef>
+</doxygen>

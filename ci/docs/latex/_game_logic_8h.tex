@@ -1,0 +1,269 @@
+\doxysection{D\+:/test/src/client/client/\+Game\+Logic.h File Reference}
+\hypertarget{_game_logic_8h}{}\label{_game_logic_8h}\index{D:/test/src/client/client/GameLogic.h@{D:/test/src/client/client/GameLogic.h}}
+
+
+Contains functions for game logic.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}tinyxml2.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_game_logic_8h_a88b1015f889477fdec8f28a23d9da68e}{parse\+Game\+State\+XML}} (const string \&filename, char \&first\+Player, string \&game\+Mode, vector$<$ vector$<$ char $>$ $>$ \&board, string \&game\+Status)
+\begin{DoxyCompactList}\small\item\em Parses the game state from an XML file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_logic_8h_a7e673c15effd00c0c496cee95c1df44c}{update\+XML}} (const string \&player, const string \&game\+Type, const vector$<$ vector$<$ char $>$ $>$ \&board)
+\begin{DoxyCompactList}\small\item\em Updates the XML file with the current game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_logic_8h_abfae4796665591512de361013cf765c8}{create\+Game\+State\+XML}} (const string \&filename, char first\+Player, const string \&game\+Mode, const vector$<$ vector$<$ char $>$ $>$ \&board)
+\begin{DoxyCompactList}\small\item\em Creates a new XML file with the initial game state. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{_game_logic_8h_a0e1af27fb4f0471b4ca5f124fe2426b0}{read\+File\+To\+String}} (const string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Reads the contents of a file into a string. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_game_logic_8h_a5b3775c56f2e98b99a5325dae43cdab2}{select\+First\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Prompts the user to select which player goes first. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{_game_logic_8h_a2a8076e5c14815a1626fafe18c5fc963}{select\+Game\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Prompts the user to select the game mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_game_logic_8h_a28bc108c5ae194bf6c757a236a935501}{make\+Move}} (vector$<$ vector$<$ char $>$ $>$ \&board, int move, char player)
+\begin{DoxyCompactList}\small\item\em Makes a move on the Tic-\/\+Tac-\/\+Toe board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_logic_8h_a11a1d9c30e1ecc8c4590c619df0b97a4}{print\+Board}} (const vector$<$ vector$<$ char $>$ $>$ \&board)
+\begin{DoxyCompactList}\small\item\em Prints the current state of the Tic-\/\+Tac-\/\+Toe board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions for game logic. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_game_logic_8h_abfae4796665591512de361013cf765c8}\index{GameLogic.h@{GameLogic.h}!createGameStateXML@{createGameStateXML}}
+\index{createGameStateXML@{createGameStateXML}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{createGameStateXML()}{createGameStateXML()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_abfae4796665591512de361013cf765c8} 
+void create\+Game\+State\+XML (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{, }\item[{char}]{first\+Player}{, }\item[{const string \&}]{game\+Mode}{, }\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new XML file with the initial game state. 
+
+This function creates an XML file containing the initial game state with player settings, game type, and an empty 3x3 game board.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the XML file to create. \\
+\hline
+{\em first\+Player} & The player who will make the first move (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em game\+Mode} & The type of game being played (e.\+g., "{}\+Man vs Man"{}, "{}\+AI vs Man"{}). \\
+\hline
+{\em board} & The 3x3 game board represented as a 2D vector of characters (\textquotesingle{}X\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, \textquotesingle{}\+\_\+\textquotesingle{}).\\
+\hline
+\end{DoxyParams}
+Creates a new XML file with the initial game state.
+
+This function generates a new XML file with the provided first player, game type, and board state. The game status is set to "{}\+Start"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the XML file to create. \\
+\hline
+{\em first\+Player} & The first player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em game\+Mode} & The game type (e.\+g., "{}\+Man vs Man"{}). \\
+\hline
+{\em board} & A 2D vector representing the initial state of the game board. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_game_logic_8h_a28bc108c5ae194bf6c757a236a935501}\index{GameLogic.h@{GameLogic.h}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a28bc108c5ae194bf6c757a236a935501} 
+bool make\+Move (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{int}]{move}{, }\item[{char}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Makes a move on the Tic-\/\+Tac-\/\+Toe board. 
+
+This function updates the game board with the specified player\textquotesingle{}s move. It places the player\textquotesingle{}s symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) on the board at the position determined by the move number (1-\/9). If the cell is already occupied, the function returns {\ttfamily false}. Otherwise, it places the symbol and returns {\ttfamily true}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A reference to a 2D vector representing the game board. \\
+\hline
+{\em move} & The move number (1-\/9) representing the position on the board where the player wants to place their symbol. \\
+\hline
+{\em player} & The symbol of the player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) making the move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move was successful (the cell was empty and the symbol was placed), false otherwise (if the cell was already occupied). 
+\end{DoxyReturn}
+\Hypertarget{_game_logic_8h_a88b1015f889477fdec8f28a23d9da68e}\index{GameLogic.h@{GameLogic.h}!parseGameStateXML@{parseGameStateXML}}
+\index{parseGameStateXML@{parseGameStateXML}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{parseGameStateXML()}{parseGameStateXML()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a88b1015f889477fdec8f28a23d9da68e} 
+void parse\+Game\+State\+XML (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{, }\item[{char \&}]{first\+Player}{, }\item[{string \&}]{game\+Mode}{, }\item[{vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{string \&}]{game\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Parses the game state from an XML file. 
+
+This function loads an XML file containing the game state and parses the relevant details, including the first player, the game mode, the current board state, and the game status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the XML file to load. \\
+\hline
+{\em first\+Player} & The player who will make the first move (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em game\+Mode} & The type of game being played (e.\+g., "{}\+Man vs Man"{}, "{}\+AI vs Man"{}). \\
+\hline
+{\em board} & The 3x3 game board represented as a 2D vector of characters (\textquotesingle{}X\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, \textquotesingle{}\+\_\+\textquotesingle{}). \\
+\hline
+{\em game\+Status} & The current status of the game (e.\+g., "{}\+Start"{}, "{}\+Game Over"{}).\\
+\hline
+\end{DoxyParams}
+Parses the game state from an XML file.
+
+This function loads a specified XML file and extracts the game state, including the first player, game type, board state, and game status. The parsed values are stored in the provided references.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the XML file to load. \\
+\hline
+{\em first\+Player} & Reference to a character where the first player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) will be stored. \\
+\hline
+{\em game\+Mode} & Reference to a string where the game mode (e.\+g., "{}\+Man vs Man"{}) will be stored. \\
+\hline
+{\em board} & Reference to a 2D vector of characters representing the board state. \\
+\hline
+{\em game\+Status} & Reference to a string where the game status (e.\+g., "{}\+Start"{}) will be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_game_logic_8h_a11a1d9c30e1ecc8c4590c619df0b97a4}\index{GameLogic.h@{GameLogic.h}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a11a1d9c30e1ecc8c4590c619df0b97a4} 
+void print\+Board (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Prints the current state of the Tic-\/\+Tac-\/\+Toe board. 
+
+This function outputs the current state of the game board to the console. It displays the 3x3 grid with each cell containing either an \textquotesingle{}X\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, or an empty space (\textquotesingle{}\+\_\+\textquotesingle{}). The board is visually formatted with lines separating the rows and columns for easier readability. The cells are colorized with green text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A constant reference to a 2D vector representing the Tic-\/\+Tac-\/\+Toe game board. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_game_logic_8h_a0e1af27fb4f0471b4ca5f124fe2426b0}\index{GameLogic.h@{GameLogic.h}!readFileToString@{readFileToString}}
+\index{readFileToString@{readFileToString}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{readFileToString()}{readFileToString()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a0e1af27fb4f0471b4ca5f124fe2426b0} 
+string read\+File\+To\+String (\begin{DoxyParamCaption}\item[{const string \&}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Reads the contents of a file into a string. 
+
+This function reads the entire content of the given file and returns it as a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path to the file to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The contents of the file as a string.
+\end{DoxyReturn}
+Reads the contents of a file into a string.
+
+This function opens a specified file, reads its contents, and returns them as a single string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The contents of the file as a string. 
+\end{DoxyReturn}
+\Hypertarget{_game_logic_8h_a5b3775c56f2e98b99a5325dae43cdab2}\index{GameLogic.h@{GameLogic.h}!selectFirstPlayer@{selectFirstPlayer}}
+\index{selectFirstPlayer@{selectFirstPlayer}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{selectFirstPlayer()}{selectFirstPlayer()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a5b3775c56f2e98b99a5325dae43cdab2} 
+char select\+First\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prompts the user to select which player goes first. 
+
+This function prompts the user to choose whether \textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{} goes first, or it randomly selects a player.
+
+\begin{DoxyReturn}{Returns}
+The character representing the first player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}).
+\end{DoxyReturn}
+Prompts the user to select which player goes first.
+
+This function asks the user whether \textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{} should go first, or if it should be chosen randomly. It returns a character (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) based on the user\textquotesingle{}s choice or random selection.
+
+\begin{DoxyReturn}{Returns}
+char The player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) who will make the first move. 
+\end{DoxyReturn}
+\Hypertarget{_game_logic_8h_a2a8076e5c14815a1626fafe18c5fc963}\index{GameLogic.h@{GameLogic.h}!selectGameMode@{selectGameMode}}
+\index{selectGameMode@{selectGameMode}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{selectGameMode()}{selectGameMode()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a2a8076e5c14815a1626fafe18c5fc963} 
+string select\+Game\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prompts the user to select the game mode. 
+
+This function allows the user to choose the game mode (e.\+g., "{}\+Man vs Man"{}, "{}\+AI vs Man"{}).
+
+\begin{DoxyReturn}{Returns}
+The selected game mode as a string.
+\end{DoxyReturn}
+This function asks the user to choose the type of game to play, such as \textquotesingle{}Man vs Man\textquotesingle{}, \textquotesingle{}Man vs AI\textquotesingle{}, \textquotesingle{}AI vs Man\textquotesingle{}, or \textquotesingle{}AI vs AI\textquotesingle{}. It returns a string representing the selected game mode.
+
+\begin{DoxyReturn}{Returns}
+string The selected game mode (e.\+g., "{}\+Man vs Man"{}, "{}\+Man vs AI"{}). 
+\end{DoxyReturn}
+\Hypertarget{_game_logic_8h_a7e673c15effd00c0c496cee95c1df44c}\index{GameLogic.h@{GameLogic.h}!updateXML@{updateXML}}
+\index{updateXML@{updateXML}!GameLogic.h@{GameLogic.h}}
+\doxysubsubsection{\texorpdfstring{updateXML()}{updateXML()}}
+{\footnotesize\ttfamily \label{_game_logic_8h_a7e673c15effd00c0c496cee95c1df44c} 
+void update\+XML (\begin{DoxyParamCaption}\item[{const string \&}]{player}{, }\item[{const string \&}]{game\+Type}{, }\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Updates the XML file with the current game state. 
+
+This function writes the updated game state (current player, game type, board) to an XML file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The current player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em game\+Type} & The type of game being played (e.\+g., "{}\+Man vs Man"{}, "{}\+AI vs Man"{}). \\
+\hline
+{\em board} & The 3x3 game board represented as a 2D vector of characters (\textquotesingle{}X\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, \textquotesingle{}\+\_\+\textquotesingle{}).\\
+\hline
+\end{DoxyParams}
+Updates the XML file with the current game state.
+
+This function writes the current player, game type, and board state to an XML file. It creates or overwrites the "{}game\+\_\+state.\+xml"{} file with the updated information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The current player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em game\+Type} & The current game type (e.\+g., "{}\+Man vs Man"{}). \\
+\hline
+{\em board} & A 2D vector representing the current state of the game board. \\
+\hline
+\end{DoxyParams}

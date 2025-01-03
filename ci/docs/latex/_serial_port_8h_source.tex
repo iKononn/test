@@ -1,0 +1,30 @@
+\doxysection{Serial\+Port.\+h}
+\hypertarget{_serial_port_8h_source}{}\label{_serial_port_8h_source}\index{D:/test/src/client/client/SerialPort.h@{D:/test/src/client/client/SerialPort.h}}
+\mbox{\hyperlink{_serial_port_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ CBR\_9600\ \ \ \ \ \ \ \ \ \ \ \ 9600}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ CBR\_19200\ \ \ \ \ \ \ \ \ \ \ 19200}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ CBR\_115200\ \ \ \ \ \ \ \ \ \ 115200}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00031\ HANDLE\ \mbox{\hyperlink{_serial_port_8h_aba21005ba55eaa15063aace08745f537}{openSerialPort}}(\textcolor{keyword}{const}\ wstring\&\ portName,\ DWORD\ baudRate);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_serial_port_8h_a7e10a8858a30f45b39bc1b18904c5a15}{sendMessage}}(HANDLE\ hSerial,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ message);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_serial_port_8h_a0c12408163c930823d6efa5dc4095533}{readMessage}}(HANDLE\ hSerial);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00059\ wstring\ \mbox{\hyperlink{_serial_port_8h_ad2b6dc672019e23dab7d591991aeaef1}{selectPort}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ DWORD\ \mbox{\hyperlink{_serial_port_8h_a127cadd593a5af64e10d94488978920b}{selectBaudRate}}();}
+
+\end{DoxyCode}
